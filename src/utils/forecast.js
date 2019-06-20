@@ -11,7 +11,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error) {
             callback(body.error, undefined);
         } else {
-            const data = `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degree out. There is a ${body.currently.precipProbability}% chance of raining.`;
+            const data = `${body.daily.data[0].summary} It is currently ${body.currently.temperature} degree out. There is a ${body.currently.precipProbability}% chance of raining.\n With highest temperature at ${body.daily.data[0].temperatureHigh} and lowest temperature at ${body.daily.data[0].temperatureLow} degree out.`;
             callback(undefined, data);
         }
     });
