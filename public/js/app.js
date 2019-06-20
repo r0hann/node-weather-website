@@ -13,8 +13,6 @@ function searchLocation(location) {
             } else {
                 messageOne.textContent = data.location;
                 messageTwo.textContent = data.forecast;
-                console.log(data.location)
-                console.log(data.forecast)
             }
         })
     })
@@ -28,6 +26,5 @@ weatherForm.addEventListener('submit', (e) => {
     messageOne.textContent = 'Loading....';
     messageTwo.textContent = '';
 
-    console.log(location);
     searchLocation(location);
 })
